@@ -5,6 +5,7 @@ import jakarta.validation.constraints.Positive;
 public class FundsTransfer {
   private Accounts fromAccount;
   private Accounts toAccount;
+  private String comments; 
 
   @Positive
   private double transferAmount;
@@ -14,11 +15,14 @@ public class FundsTransfer {
   }
 
 
-  public FundsTransfer(Accounts fromAccount, Accounts toAccount) {
+
+  public FundsTransfer(Accounts fromAccount, Accounts toAccount, String comments, @Positive double transferAmount) {
     this.fromAccount = fromAccount;
     this.toAccount = toAccount;
-    
+    this.comments = comments;
+    this.transferAmount = transferAmount;
   }
+
 
 
   public Accounts getFromAccount() {
@@ -48,6 +52,22 @@ public class FundsTransfer {
 
   public void setTransferAmount(double transferAmount) {
     this.transferAmount = transferAmount;
+  }
+
+
+
+
+
+  public String getComments() {
+    return comments;
+  }
+
+
+
+
+
+  public void setComments(String comments) {
+    this.comments = comments;
   }
   
   

@@ -9,24 +9,31 @@
   <body>
     <h1>Funds Transfer</h1>
     <form method="POST" action="/transfer">
-      <table>
-        <tr>
-          <td>From account:</td>
-          <td><input type="text" name="name" /></td>
-        </tr>
-        <tr>
-          <td>To account:</td>
-          <td><input type="text" name="name" /></td>
-        </tr>
-        <tr>
-          <td>Amount:</td>
-          <td><input type="number" name="balance" min="1" value="1" /></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><button type="submit">Add</button></td>
-        </tr>
-      </table>
+      <label for="fromAccount">From account:</label>
+      <select id="fromAccount" name="fromAccount">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <br />
+
+      <label for="toAccount">To account:</label>
+      <select id="toAccount" name="toAccount">
+        <option value="option4">Option 4</option>
+        <option value="option5">Option 5</option>
+        <option value="option6">Option 6</option>
+      </select>
+      <br />
+
+      <label for="balance">Amount:</label>
+      <input type="text" id="balance" name="balance" />
+      <br />
+
+      <label for="comment">Comments:</label>
+      <input type="text" id="comment" name="comment" />
+      <br />
+
+      <input type="submit" value="Transfer" />
     </form>
   </body>
 </html>

@@ -15,5 +15,9 @@ public class FundsTransferController {
     @Autowired
     private FundsTransferService fundsTransferService;
 
-   
+    @PostMapping("/transfer")
+    public ResponseEntity<String> transferFunds(@RequestParam String fromAccount, @RequestParam String toAccount, @RequestParam double balance) {
+        fundsTransferService.transfer(fromAccount, toAccount, balance);
+        return ResponseEntity.ok("Funds transfer successful");
+    }
 }
