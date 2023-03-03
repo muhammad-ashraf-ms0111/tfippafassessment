@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 //import com.nusiss.tfip.tfippafassessment.models.Accounts;
 
 @Repository
-public class AccountsRepo {
+public class FundsTransferRepo {
   
   @Autowired
   JdbcTemplate template;
